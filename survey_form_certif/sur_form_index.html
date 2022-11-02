@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sur_form_style.css" type="text/css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Thank you for taking the time to fill out this survey.</p>
+      <p><span class="clue">Please fill out the information below and give your opinion on the matters.</span></p>
+    </header>
+    <form id="survey-form" action="https://register-demo.freecodecamp.org">
+      <fieldset>
+        <label id="name-label" for="name"
+          >Full Name:<input id="name" type="text" placeholder="Name Surname" required
+        /></label>
+        <label id="email-label" for="email"
+          >Email:<input
+            id="email"
+            type="email"
+            placeholder="Email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+            required
+        /></label>
+        <label id="number-label" for="number"
+          >Age(Optional):<input id="number" type="number" placeholder="Age" min="16" max="116"
+        /></label>
+      </fieldset>
+      <fieldset>
+        <p class="inline">Do you like the current design of the website?</p>
+        <label for="likeness"> <input name="likeness" class="inline" type="radio" value="yes" />Yes </label>
+        <label for="likeness"> <input name="likeness" class="inline" type="radio" value="no" />No </label>
+        <label for="likeness"> <input name="likeness" class="inline" type="radio" value="not-sure" />Not sure </label>
+      </fieldset>
+      <fieldset>
+        <label for="dropdown">
+          What type of design do would you like most?
+          <select name="dropdown" id="dropdown">
+            <option value="0">Select an option</option>
+            <option value="1">Interactive Design</option>
+            <option value="2">Minimalist Design</option>
+            <option value="3">Colorful Design</option>
+            <option value="4">Geometric Design</option>
+          </select>
+        </label>
+        <label>What elements do you like the most in the current design?</label>
+        <label><span class="clue">(You can select multiple)</span></label>
+        <label> <input type="checkbox" class="inline" name="prefer" value="Retro-design" />Retro design </label>
+        <label> <input type="checkbox" class="inline" name="prefer" value="The-background" />The background </label>
+        <label> <input type="checkbox" class="inline" name="prefer" value="The-simplicity" />The simplicity </label>
+        <label> <input type="checkbox" class="inline" name="prefer" value="The-font" />The font </label>
+      </fieldset>
+      <fieldset>
+        <label for="suggestions"
+          >Any comments or suggestions?
+          <textarea
+            name="suggestions"
+            id="suggestions"
+            cols="30"
+            rows="10"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </label>
+        <input type="submit" id="submit" value="Submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
